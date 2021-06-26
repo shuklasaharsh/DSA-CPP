@@ -4,10 +4,8 @@
 //
 //  Created by Saharsh Shukla on 25/06/21.
 //
+#include "../DSA.h"
 
-#include <iostream>
-#include <vector>
-#include <utility>
 using namespace std;
 
 ostream& operator << (ostream &o, vector<vector<int>> a) {
