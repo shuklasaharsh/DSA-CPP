@@ -1,0 +1,24 @@
+{
+  "name": "DSA-CPP",
+  "version": "1.0.0",
+  "description": "",
+  "main": "keeptrack.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shuklasaharsh/DSA-CPP.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shuklasaharsh/DSA-CPP/issues"
+  },
+  "homepage": "https://github.com/shuklasaharsh/DSA-CPP#readme",
+  "dependencies": {
+    "chalk": "^4.1.1",
+    "yargs": "^17.0.1"
+  }
+}
