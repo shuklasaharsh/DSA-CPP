@@ -14,10 +14,15 @@ yargs.command({
             describe: "URL of the solved problem",
             demandOption: true,
             type: 'string'
+        },
+        location: {
+            describe: "Location of the file",
+            demandOption: true,
+            type: 'string'
         }
     },
     handler(argv) {
-        utils.addProblem(argv.title, argv.link)
+        utils.addProblem(argv.title, argv.link, argv.location)
     }
 })
 

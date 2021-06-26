@@ -20,14 +20,15 @@ saveData = (notes) => {
 }
 
 let addProblem;
-addProblem = (title, link) => {
+addProblem = (title, link, location) => {
     const data = loadData()
         // const duplicateNotes = notes.filter((note) => note.title === title)
     const duplicateProblem = data.find((singularData) => singularData.title === title)
     if (!duplicateProblem) {
         data.push({
             title: title,
-            link: link
+            link: link,
+            location: location
         })
         console.log(chalk.green.inverse("Problem added"))
         saveData(data)
@@ -45,7 +46,7 @@ checkProblem = (link) => {
     if (!duplicateProblem) {
         console.log("This problem has not been solved")
     } else {
-        console.log("taken")
+        console.log(chalk.green.inverse("taken: ") + chalk.red.bold.inverse("\nlocation: " + JSON.stringify(duplicateProblem.location)))
     }
 }
 
