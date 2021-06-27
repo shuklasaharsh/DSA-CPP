@@ -1,6 +1,6 @@
 const fs = require('fs')
 const chalk = require('chalk')
-
+const prompt = require('prompt-sync')({ sigint: true })
 let loadData;
 loadData = () => {
     try {
@@ -39,6 +39,14 @@ addProblem = (title, link, location) => {
 
 }
 
+let addProblemUser;
+addProblemUser = () => {
+    let askTitle = prompt("Enter title: ");
+    let askLink = prompt('Enter Link: ');
+    let askLocation = prompt('Enter Location: ');
+    addProblem(askTitle, askLink, askLocation);
+}
+
 let checkProblem;
 checkProblem = (link) => {
     const data = loadData()
@@ -50,9 +58,16 @@ checkProblem = (link) => {
     }
 }
 
+let ListProblems;
+ListProblems = (data2) => {
+    const data = loadData()
+    console.table(data)
+}
 module.exports = {
     addProblem,
     checkProblem,
     loadData,
-    saveData
+    saveData,
+    ListProblems,
+    addProblemUser
 }

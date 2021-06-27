@@ -1,7 +1,7 @@
 {
-  "name": "DSA-CPP",
+  "name": "keep-track-files",
   "version": "1.0.0",
-  "description": "",
+  "description": "This Command line utility lets you manually add and remove your programs and helps you keep track",
   "main": "keeptrack.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -11,7 +11,7 @@
     "url": "git+https://github.com/shuklasaharsh/DSA-CPP.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "{name: 'Saharsh Shukla', mail: 'saharsh.shukla2018@vitstudent.ac.in'}",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/shuklasaharsh/DSA-CPP/issues"
@@ -19,6 +19,8 @@
   "homepage": "https://github.com/shuklasaharsh/DSA-CPP#readme",
   "dependencies": {
     "chalk": "^4.1.1",
+    "prompt-sync": "^4.2.0",
     "yargs": "^17.0.1"
-  }
+  },
+  "devDependencies": {}
 }

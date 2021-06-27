@@ -8,6 +8,6 @@ int main() {
     for (int i = 0; i < TESTCASES; i++) {
         int in;
         cin>> in;
-        cout << sqrt(in) << endl;
+        cout << int(sqrt(in)) << endl;
     }
 }

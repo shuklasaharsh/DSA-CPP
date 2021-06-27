@@ -2,22 +2,22 @@ const fs = require('fs')
 const yargs = require('yargs')
 const utils = require('./keeptrackfiles/utils')
 yargs.command({
-    command: 'add',
+    command: 'cmdadd',
     describe: 'Add a new problem',
     builder: {
         title: {
             describe: "Title of the problem",
-            demandOption: true,
+            demandOption: false,
             type: 'string'
         },
         link: {
             describe: "URL of the solved problem",
-            demandOption: true,
+            demandOption: false,
             type: 'string'
         },
         location: {
             describe: "Location of the file",
-            demandOption: true,
+            demandOption: false,
             type: 'string'
         }
     },
@@ -38,6 +38,22 @@ yargs.command({
     },
     handler(argv) {
         utils.checkProblem(argv.link)
+    }
+})
+
+yargs.command({
+    command: 'list',
+    describe: 'List all problems',
+    handler(argv) {
+        utils.ListProblems(argv)
+    }
+})
+
+yargs.command({
+    command: 'add',
+    describe: 'Add command using user inputs',
+    handler() {
+        utils.addProblemUser()
     }
 })
 
