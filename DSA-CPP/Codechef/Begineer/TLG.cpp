@@ -7,15 +7,13 @@ int main() {
     int TESTCASES;
     cin >> TESTCASES;
     int max = INT_MIN;
-    int index = 0;
-    for (int i =0; i < TESTCASES; i++) {
-        int a,b;
+    for (int i = 0; i < TESTCASES; i++) {
+        int a, b;
         cin >> a >> b;
-        int current = abs(a-b);
-        if (current > max) {
-            max = current;
-            index = i;
+        int diff = abs(a-b);
+        if (diff > max) {
+            max = diff;
+            if (a>b)
         }
     }
-    cout << ++index << " " << max;
 }
