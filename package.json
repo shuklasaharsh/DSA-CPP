@@ -4,7 +4,8 @@
   "description": "This Command line utility lets you manually add and remove your programs and helps you keep track",
   "main": "keeptrack.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node keeptrack.js"
   },
   "repository": {
     "type": "git",
