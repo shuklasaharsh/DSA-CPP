@@ -1,22 +1,24 @@
-#include <iostream>
-#include <algorithm>
-#include <vector>
-
+#include <bits/stdc++.h>
+#define ll long long int
 using namespace std;
 
-int main() {
-    int TEST;
-    cin >> TEST;
-    vector<int> arr;
-    for (int i =0; i < TEST; i++) {
-        int temp;
-        cin >> temp;
-        arr.push_back(temp);
+int main()
+{
+    ll t, n1, n2, c = 0, b = 0;
+    ll a[2] = {0};
+    cin>>t;
+    while(t--)
+    {
+        cin>>n1>>n2;
+        c += n1;
+        b += n2;
+        ll x = abs(c - b);
+        if(x > a[1] )
+        {
+            a[0] = (c>b)? 1:2;
+            a[1] = x;
+        }
+               
     }
-
-    sort(arr.begin(), arr.end());
-    for (auto i : arr) {
-        cout << i << endl;
-    }
-    return 0;
+    cout<<a[0]<<" "<<a[1];
 }
