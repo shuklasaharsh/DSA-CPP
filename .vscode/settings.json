@@ -5,6 +5,7 @@
         "vector": "cpp",
         "algorithm": "cpp",
         "utility": "cpp",
-        "climits": "cpp"
+        "climits": "cpp",
+        "iterator": "cpp"
     }
 }

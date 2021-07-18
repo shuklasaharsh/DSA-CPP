@@ -22,3 +22,63 @@ Sample Output
 Explanation
 Maximum Circular Sum = 22 (12 + 8 - 8 + 9 - 9 + 10)
 */
+
+/*
+My Algorithm:
+Using Right rotate to rotate the vector and then proceed to find kadane's solution
+*/
+
+#include <iostream>
+#include <vector>
+#include <algorithm>
+
+#define typeVector vector<int>
+
+using namespace std;
+
+
+int kadaneVector(typeVector A) {
+    int cs = 0;
+    int ms = 0;
+    for (int i = 0; i < A.size(); i++) {
+        cs+=A[i];
+        if(cs<0) {
+            cs = 0;
+        }
+        ms = max(cs, ms);
+    }
+
+    return ms;
+}
+
+
+void actualMain() {
+    int n;
+    cin >> n;
+    typeVector v;
+    for (int i = 0; i < n; i++) {
+        int temp;
+        cin >> temp;
+        v.push_back(temp);
+    }
+
+    typeVector res;
+    for (int i =0; i < n; i++) {
+        res.push_back(kadaneVector(v));
+        rotate(v.begin(), v.begin()+v.size()-1, v.end());
+    }
+    sort(res.begin(), res.end());
+    cout << res[res.size()-1] << endl;
+}
+
+
+
+using namespace std;
+
+int main() {
+    int t;
+    cin >> t;
+    for (int i = 0; i < t; i++) {
+        actualMain();
+    }
+}
