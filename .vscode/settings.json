@@ -6,6 +6,8 @@
         "algorithm": "cpp",
         "utility": "cpp",
         "climits": "cpp",
-        "iterator": "cpp"
+        "iterator": "cpp",
+        "new": "cpp",
+        "ostream": "cpp"
     }
 }
