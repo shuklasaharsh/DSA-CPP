@@ -25,9 +25,9 @@ void sieve() {
 
 bool isPrime(ll number) {
     if (number <= n) {
-        return b[number]?true:false;
+        return (b[number]==1)?true:false;
     } else {
-        for (ll i = 0; i*i < number; i++) {
+        for (ll i = 0; (ll)primes[i]*(ll)primes[i] < number; i++) {
             if (number%primes[i]) {
                 return false;
             }
@@ -37,6 +37,9 @@ bool isPrime(ll number) {
 }
 
 int main() {
-
+    sieve();
+    ll number_;
+    cin >> number_;
+    cout << isPrime(number_) << endl;
 
 }
