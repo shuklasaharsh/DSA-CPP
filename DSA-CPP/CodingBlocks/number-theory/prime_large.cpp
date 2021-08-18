@@ -11,7 +11,7 @@ bitset<10000005> b;
 vector <int> primes;
 bool isPrime(ll No) {
     if (No <= n) {
-        return b
+        
     }
 }
 
